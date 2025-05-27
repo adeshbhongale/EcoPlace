@@ -5,8 +5,8 @@ import { BsThreeDots } from "react-icons/bs";
 const ChatBot = ({ onClose }) => {
   const [chatInput, setChatInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
-  const [chatLoading, setChatLoading] = useState(false);
   const [chatError, setChatError] = useState("");
+  const [chatLoading, setChatLoading] = useState(false);
 
   const sendMessageToChatbot = async () => {
     if (!chatInput.trim()) {
