@@ -2,7 +2,7 @@ EcoScore: AI-Powered Sustainable Shopping Platform
 
 ## Problem Statement
 
-Online shoppers lack easy access to environmental impact information when making purchase decisions, making it difficult to make eco-conscious choices. Consumers and businesses are increasingly aware of the importance of sustainability, but they often lack the tools to make informed eco-friendly purchasing decisions. The environmental impact of products is not always transparent, making it difficult to choose sustainable options.
+Online shoppers lack easy access to environmental impact information when making purchase decisions, making it difficult to make eco-conscious choices. Consumers and businesses are increasingly aware of the importance of sustainability, but they often lack the tools to make informed, eco-friendly purchasing decisions. The environmental impact of products is not always transparent, making it difficult to choose sustainable options.
 
 ## Solution (Link - https://eco-place-cyan.vercel.app/)
 
@@ -35,7 +35,7 @@ Color-coded ratings:
 #### Point System
 - Earn points for browsing eco-friendly products
 - Additional points for selecting high EcoScore items
-- Bonus points for consistent sustainable shopping
+- Bonus points for consistent, sustainable shopping
 
 #### Rewards Program
 - Redeem points for eco-friendly products
@@ -52,12 +52,12 @@ Color-coded ratings:
 - Personalized sustainability recommendations
 
 ### 5. User Dashboard
-- Shows User's EcoScore along with their information
+- Shows the User's EcoScore along with their information
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React.js - For building dynamic and responsive user interface
+- React.js - For building a dynamic and responsive user interface
 - TailwindCSS - For modern, utility-first styling and responsive design
 
 ### Backend
@@ -67,3 +67,9 @@ Color-coded ratings:
 - Gemini - AI integration for product analysis and EcoScore calculation
 - Plotch.ai - For intelligent chatbot integration and sustainability insights
 - JavaScript - Primary programming language for both frontend and backend
+
+License
+This project is licensed under the MIT License.
+
+Contact
+For questions or feedback, please contact adeshbhongale03@gmail.com.
