@@ -2,17 +2,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Firebase configuration using Vite environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyCZJqrhbcZXOFbT2n8zD75DDXCaF_9JItw",
-  authDomain: "ecoplace-2c4aa.firebaseapp.com",
-  projectId: "ecoplace-2c4aa",
-  storageBucket: "ecoplace-2c4aa.firebasestorage.app",
-  messagingSenderId: "734328699590",
-  appId: "1:734328699590:web:31237bf68eab404d7835c7"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase

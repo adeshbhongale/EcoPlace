@@ -36,12 +36,32 @@ const ProductCard = ({ item }) => {
 
   // Expanded ecoAttributes
   const ecoAttributes = {
-    materials: [
-      "bamboo", "hemp", "organic cotton", "recycled plastic", "organic wool", "recycled cotton", "silk", "linen"
+    recycling: [
+      "recyclable", 
+      "recycled materials",
+      "zero waste"
     ],
-    recyclability: ["recyclable", "recycled", "upcycled"],
-    biodegradability: ["biodegradable", "compostable", "eco-friendly", "natural fibers"],
-    packaging: ["recyclable packaging", "compostable packaging", "minimal packaging", "plastic-free packaging"],
+    practices: [
+      "sustainable production",
+      "eco-friendly manufacturing",
+      "carbon neutral"
+    ],
+    impact: [
+      "biodegradable",
+      "plastic-free",
+      "renewable"
+    ],
+    material: [
+      "bamboo",
+      "organic cotton",
+      "hemp",
+      "cotton",
+      "silk",
+      "wool",
+      "linen",
+      "wood",
+      "leather",
+    ]
   };
 
   // Calculate eco score based on attributes in title or description
@@ -70,16 +90,46 @@ const ProductCard = ({ item }) => {
   };
 
   const getEcoScoreExplanation = () => {
-    const reasons = [];
-    Object.entries(ecoAttributes).forEach(([key, attributes]) => {
-      attributes.forEach((attribute) => {
-        if (item.title.toLowerCase().includes(attribute) || item.snippet.toLowerCase().includes(attribute)) {
-          reasons.push(`Contains ${attribute} (${key})`);
-        }
-      });
-    });
+    let explanation = "";
+    
+    if (ecoScore >= 50) {
+      explanation = `
+        ✓ High sustainability score
+        ✓ Uses eco-friendly manufacturing
+        ✓ Has recycling initiatives
+        ✓ Minimal environmental impact
+      `;
+    } else if (ecoScore >= 20) {
+      explanation = `
+        ✓ Moderate eco-friendly features
+        ⚠ Could improve recycling practices
+        ⚠ Partial sustainable materials used
+        ℹ Consider more eco-friendly alternatives
+      `;
+    } else {
+      explanation = `
+        ✗ Limited sustainability features
+        ✗ No clear recycling information
+        ✗ High environmental impact
+        ℹ Look for more sustainable options
+      `;
+    }
 
-    return reasons.length > 0 ? reasons.join(", ") : "No specific eco-friendly attributes found.";
+    return (
+      <div className="space-y-2 p-4 bg-gray-50 rounded-lg">
+        <h4 className="font-medium text-gray-800">
+          Sustainability Analysis:
+        </h4>
+        <pre className="whitespace-pre-line text-sm text-gray-600">
+          {explanation}
+        </pre>
+        <p className="text-sm text-gray-500 mt-2">
+          {ecoScore >= 80 ? 
+            "This product demonstrates strong commitment to environmental sustainability." :
+            "This product could benefit from improved sustainability practices."}
+        </p>
+      </div>
+    );
   };
 
   const awardPoints = async () => {
@@ -178,7 +228,7 @@ const ProductCard = ({ item }) => {
             Sustainability Details
           </button>
           {showDetails && (
-            <div className="mt-2 p-3 bg-green-50 rounded-lg text-sm">
+            <div className="mt-2 p-4 bg-green-50 rounded-lg text-sm">
               {getEcoScoreExplanation()}
             </div>
           )}

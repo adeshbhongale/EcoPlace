@@ -11,7 +11,7 @@ const Marketplace = () => {
       id: 1,
       name: "Eco-friendly Water Bottle",
       description: "A reusable water bottle made from sustainable materials.",
-      points: 50,
+      points: 2,
       image: "image here", // Replace image with text
       impact: "Saves 1,460 plastic bottles per year"
     },
@@ -19,7 +19,7 @@ const Marketplace = () => {
       id: 2,
       name: "Reusable Shopping Bag",
       description: "A durable shopping bag made from recycled materials.",
-      points: 30,
+      points: 2,
       image: "image here", // Replace image with text
       impact: "Prevents 170 plastic bags from landfills"
     },
@@ -27,7 +27,7 @@ const Marketplace = () => {
       id: 3, // New product added
       name: "Compostable Phone Case",
       description: "A phone case made from compostable materials, reducing plastic waste.",
-      points: 60,
+      points: 2,
       image: "image here", // Replace image with text
       impact: "Reduces 50 plastic phone cases per year"
     },
